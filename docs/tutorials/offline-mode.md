@@ -4,7 +4,9 @@ title: "🔌 Offline Mode"
 ---
 
 :::warning
+
 This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the [contributing tutorial](../contributing.mdx).
+
 :::
 
 # Running Open WebUI in offline mode 🔌
@@ -118,7 +120,7 @@ services:
       - OFFLINE_MODE=True
       - RAG_EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
       - WHISPER_MODEL=Systran/faster-whisper-large-v3
-    volume:
+    volumes:
       - ./open-webui-data:/app/backend/data
       - ./models/sentence-transformers/all-MiniLM-L6-v2:/app/backend/data/cache/embedding/models/
       - ./models/Systran/faster-whisper-large-v3:/app/backend/data/cache/whisper/models/
